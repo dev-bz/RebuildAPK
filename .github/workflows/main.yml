@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: Get apktool
         run: |
-          wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
+          wget -q https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
           find
       - name: Get APK
         run: |
-          wget https://secure.downloadfp.com/android/US/com.aide.ui/2008210017/aide.apk?st=wfS_JvA8mDhSb7Mf2IHOFA&e=1675735636 app.apk
+          wget -q -O app.apk https://secure.downloadfp.com/android/US/com.aide.ui/2008210017/aide.apk?st=wfS_JvA8mDhSb7Mf2IHOFA&e=1675735636
           find
       - name: Decompress resources
         run: java -jar apktool_2.7.0.jar
