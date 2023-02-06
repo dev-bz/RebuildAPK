@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Get apktool
