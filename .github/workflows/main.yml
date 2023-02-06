@@ -22,6 +22,6 @@ jobs:
       - name: Edit sources
         run: echo TO DO
       - name: Build APK
-        run: java -jar apktool_2.7.0.jar -b app
+        run: java -jar apktool_2.7.0.jar b app
       - name: Display result
         run: find -type f -name "*.apk"
