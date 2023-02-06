@@ -14,9 +14,11 @@ jobs:
           wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
           find
       - name: Get APK
-        run: echo TO DO
+        run: |
+          wget https://secure.downloadfp.com/android/US/com.aide.ui/2008210017/aide.apk?st=wfS_JvA8mDhSb7Mf2IHOFA&e=1675735636 app.apk
+          find
       - name: Decompress resources
-        run: java -jar apktool_2.7.0.jar --help
+        run: java -jar apktool_2.7.0.jar
       - name: Edit sources
         run: TO DO
       - name: Build APK
