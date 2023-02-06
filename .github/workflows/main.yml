@@ -16,11 +16,12 @@ jobs:
       - name: Get APK
         run: |
           wget -q -O app.apk https://secure.downloadfp.com/android/US/com.aide.ui/2008210017/aide.apk?st=wfS_JvA8mDhSb7Mf2IHOFA&e=1675735636
-          find
+          find -type f
       - name: Decompress resources
-        run: java -jar apktool_2.7.0.jar
+        run: java -jar apktool_2.7.0.jar d -s app.apk
       - name: Edit sources
-        run: TO DO
+        run: echo TO DO
       - name: Build APK
-        run: TO DO
- 
+        run: java -jar apktool_2.7.0.jar -b app
+      - name: Display result
+        run: find -type f -name "*.apk"
