@@ -15,7 +15,7 @@ jobs:
           find
       - name: Get APK
         run: |
-          wget -q -O app.apk https://secure.downloadfp.com/android/US/com.aide.ui/2008210017/aide.apk?st=wfS_JvA8mDhSb7Mf2IHOFA&e=1675735636
+          wget -q -O app.apk https://hole.apkdone.download/s/22FeFJFWr2JQYH8/download
           find -type f
       - name: Decompress resources
         run: java -jar apktool_2.7.0.jar d -s app.apk
