@@ -1,0 +1,24 @@
+name: rebuild AIDE
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get apktool
+        run: |
+          wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
+          find
+      - name: Get APK
+        run: echo TO DO
+      - name: Decompress resources
+        run: java -jar apktool_2.7.0.jar --help
+      - name: Edit sources
+        run: TO DO
+      - name: Build APK
+        run: TO DO
+ 
