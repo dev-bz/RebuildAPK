@@ -15,8 +15,8 @@ jobs:
           find
       - name: Get APK
         run: |
-          wget -q -O app.apk https://gitee.com/dev-bz/uploading/releases/download/0.0.0/AIDE_3.2.200127.apk
-          # https://hole.apkdone.download/s/22FeFJFWr2JQYH8/download
+          # wget -q -O app.apk https://gitee.com/dev-bz/uploading/releases/download/0.0.0/AIDE_3.2.200127.apk
+          wget -q -O app.apk https://hole.apkdone.download/s/22FeFJFWr2JQYH8/download
           find -type f
       - name: Decompress resources
         run: java -jar apktool_2.7.0.jar d -s app.apk
