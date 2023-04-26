@@ -21,7 +21,9 @@ jobs:
       - name: Decompress resources
         run: java -jar apktool_2.7.0.jar d -s app.apk
       - name: Edit sources
-        run: sed s/textVisiblePassword/text/g app/res/values/styles.xml -i
+        run: |
+          sed s/textVisiblePassword/text/g app/res/values/styles.xml -i
+          sed 's/"sensor"/"user"/g' app/AndroidManifest.xml -i
       - name: Build APK
         run: java -jar apktool_2.7.0.jar b app
       - name: Display result
